@@ -1,0 +1,24 @@
+{
+  "books": [
+    {
+      "title": "Computer",
+      "id": 2
+    },
+    {
+      "title": "Waterfall",
+      "id": 3
+    },
+    {
+      "title": "Strawberries",
+      "id": 4
+    },
+    {
+      "title": "Wolf",
+      "id": 10
+    },
+    {
+      "title": "Another one",
+      "id": 11
+    }
+  ]
+}
