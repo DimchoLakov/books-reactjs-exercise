@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import { createContext, useCallback, useState } from "react";
 import { getAllBooks, updateBook, deleteBook, createBook } from "../../api";
 
 const BooksContext = createContext();
@@ -6,10 +6,10 @@ const BooksContext = createContext();
 function Provider({ children }) {
     const [books, setBooks] = useState([]);
 
-    const fetchBooks = async () => {
+    const fetchBooks = useCallback(async () => {
         const allBooks = await getAllBooks();
         setBooks(allBooks);
-    };
+    }, []);
 
     const editBookById = async (id, newTitle) => {
         const updatedBook = await updateBook(id, newTitle);
